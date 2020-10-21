@@ -5,9 +5,9 @@ from api import *
 
 def main():
     #bd.creationGlobal() 
-    #changementAttribut(1, Couleur = 'noir', TypeEpi = 'accroche')
-    ajoutTypeEPI('accroche')
-    print(TYPE_EPI)
+    #changementAttribut(1, Couleur = 'noir', NombreDansLeLot =12)
+    #ajoutTypeEPI('accroche')
+    #print(TYPE_EPI)
     #remplissage()
 
 if __name__ == "__main__":

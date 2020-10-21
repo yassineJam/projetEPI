@@ -6,7 +6,7 @@ import os.path
 
 def creationGlobal():
 	try:
-		if os.path.isfile('base.sql'):
+		if os.path.isfile('bae.sql'):
 			print("La base de donnée existe déja !")
 		else :
 			fichierSQL = open('base.sql','r')
