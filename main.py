@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
-import bddCreation as bd
 from api import * 
 
 
-def main():
-    #bd.creationGlobal() 
-    #changementAttribut(1, Couleur = 'noir', NombreDansLeLot =12)
+def main():   
+	#changementAttribut(1, Couleur = 'vert', NombreDansLeLot =12,StatutLocation = True)
     #ajoutTypeEPI('accroche')
     #print(TYPE_EPI)
-    #remplissage()
+    remplissageCSV()
 
 if __name__ == "__main__":
     main()

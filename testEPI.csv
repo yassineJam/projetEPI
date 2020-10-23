@@ -1,0 +1,120 @@
+﻿TypeEpi; NumSerie; DateDeFabrication; DateAchat; DatePremiereUtilisation; DateMiseAuRebut; Modele; DureeDeVie; DureeUtilisation; Marque; Couleur; NombreDansLeLot; StatutLocation; MisEnService; RetraitEPI; MiseEnRebut
+Connecteur;AD1057;2015;2016;01/01/17;;HMS Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD0808;2015;2016;01/01/17;;HMS Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;347;2015;2016;01/01/17;;HMS Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;4521;2015;2016;01/01/17;;HMS Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;275;2015;2016;01/01/17;;HMS Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD1057;2015;2016;01/01/17;;HMS Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD1058;2015;2016;01/01/17;;Guide Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD1059;2016;2016;01/01/17;;Guide Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD1060;2017;2019;01/01/20;;Guide Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD1061;2018;2019;01/01/20;;Guide Lock;100;100;Camp;;1;0;1;0;0
+Connecteur;AD1062;2019;2019;01/01/20;;Guide Lock;100;100;Camp;;1;0;1;0;0
+dégaines;;2017;2017;01/01/18;;Fil;15;10;Fixe;orange;15;0;1;0;0
+dégaines;;2017;2017;01/01/18;;Plein;15;10;Fixe;orange;19;0;1;0;0
+Frein;79811;2018;2018;01/01/18;;ATC Belay;100;100;Black Diamond;Orange;2;0;1;0;0
+Frein;0175E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0004E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0035E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0039E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0094E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0117E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0133E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0137E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0138E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0172E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0175E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0212E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;0241E;2017;2018;01/01/18;;Bug;100;100;DMM;Vert;1;0;1;0;0
+Frein;7057FA1591;2009;2009;01/01/09;;Grirgi1;100;100;Petzl;;1;0;1;0;0
+Frein;19C0182614261;2019;2019;01/01/19;;Grirgi2;100;100;Petzl;;1;0;1;0;0
+Harnais;J74;2011;2011;01/01/11;;Aeroteam3;15;10;Beal;;1;0;1;0;0
+Harnais;E9T;2010;2011;01/01/11;;Aeroteam3;15;10;Beal;;1;0;1;0;0
+Harnais;293;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;0DL ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;18N ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;3AJ ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;7BA ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;A8K ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;CA4;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;CAG ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;DBW ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;JBI ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;L10 ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;LA1 ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;ODD ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;QCK ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;RDO ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;UDB ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;UDN ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;V81 ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;V8P;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;XDM ;2016;2016;01/01/17;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;T3K;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;R32;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;W57;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;K0Y;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;71Y;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;91S;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;26U;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;0G4;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;16S;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Harnais;14R;2018;2018;01/01/19;;Aeroteam4;15;10;Beal;;1;0;1;0;0
+Casque;FF05 1107;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1115;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1116;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1117;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1119;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1120;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1124;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1125;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1126;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1127;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1128;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1132;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1133;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1134;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1135;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1136;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1140;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1141;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1163;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF05 1176;2018;2018;01/01/18;;Titan;10;10;Camp;Rouge;1;0;1;0;0
+Casque;FF06 3449;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3456;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3457;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3460;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3482;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3512;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3520;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3863;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3870;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;FF06 3871;2018;2018;01/01/18;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;T18 / 019986;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 019935;2019;2019;01/01/19;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;T18 / 019902;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 019945;2019;2019;01/01/19;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;T18 / 019981;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 019970;2019;2019;01/01/19;;Rockstar;10;10;Camp;Blanc;1;0;1;0;0
+Casque;T18 / 019915;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 022535;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 022540;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 022534;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;T18 / 019879;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Casque;FF06 3421;2019;2019;;;Rockstar;10;10;Camp;Blanc;1;0;0;0;0
+Cordelette;394T;2019;2019;01/01/19;;Jammy;15;10;Beal;Bleue;1;0;1;0;0
+Cordelette;4A59;2019;2019;01/01/19;;Jammy;15;10;Beal;Bleue;1;0;1;0;0
+Cordelette;2646;2019;2019;01/01/19;;Jammy;15;10;Beal;Bleue;1;0;1;0;0
+Cordelette;1F43;2019;2019;01/01/19;;Jammy;15;10;Beal;Bleue;1;0;1;0;0
+Cordelette;2M55;2019;2019;;;Jammy;15;10;Beal;Bleue;1;0;0;0;0
+Cordelette;4A5X;2019;2019;;;Jammy;15;10;Beal;Bleue;1;0;0;0;0
+Cordelette;1O40;2019;2019;;;Jammy;15;10;Beal;Bleue;1;0;0;0;0
+Cordelette;4X49;2019;2019;;;Jammy;15;10;Beal;Bleue;1;0;0;0;0
+Longe;X56 M004010919  --  14 180 111  --  14 180 271;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;35S M004010919  --  14 180 366  --  14 180 294;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;A9J M004010919  --  14 180 488  --  41 170 393;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;KDX M004010919  --  14 180 371  --  14 180 450;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;G9H M004010919  --  1218 AD1131  --  41 170 490;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;P0B M004010919  --  4 184 616  --  14 180 329;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;DIL M004010919  --  1218 AD 0861  --  14 180 335;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
+Longe;49X M004010919  --  4 184 531  --  4 184 661;2019;2019;01/01/19;;DynaDoubleclip;15;10;Beal;;1;0;1;0;0
