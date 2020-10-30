@@ -368,6 +368,8 @@ def ajoutReservation(dateLocation,dateRetour,prenom, nom,idEPI,remarque =""):
 						curseur.execute('SELECT Id_personne FROM Personne WHERE Nom = ? AND Prenom = ?',(nom,prenom))
 						idPersonne = curseur.fetchone()[0]
 						curseur.execute('INSERT INTO ContratLocation(DateLocation,DateRetour,Id_personne,Id_EPI,Remarque) VALUES (?,?,?,?,?)',(dateLocation,dateRetour,idPersonne,idEPI,remarque))
+						connexion.commit()
+						changementAttribut(idEPI, StatutLocation = 1)
 						print("Contrat de location ajouté")	
 					else:
 						print("L'EPI est en rebut")

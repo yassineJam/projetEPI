@@ -12,133 +12,141 @@ import datetime
 
 #Afficher la liste de tout le matériel
 
-def AfficheEPI():
-    try:
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From EPI')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
-        
+def _affichage(tableau,curseur):
+	flag = 1
+	nomsColonne =['Id_epi','TypeEpi', 'NumSerie','DateDeFabrication', 'DateAchat', 'DatePremiereUtilisation', 'DateMiseAuRebut', 'Modele', 'DureeDeVie', 'DureeUtilisation','Marque', 'Couleur', 'NombreDansLeLot', 'StatutLocation', 'MisEnService', 'RetraitEPI', 'MiseEnRebut']
+	for item in tableau:
+		for i in range(1,16):
+			curseur.execute('SELECT MAX(LENGTH({})) FROM EPI'.format(nomsColonne[i]))
+			longueurColonneMax = curseur.fetchall()[0][0]
+			if type(item[i])==str:
+				print(item[i].rjust(longueurColonneMax)+ " |", end = '')
+			else:
+				print(str(item[i]).rjust(longueurColonneMax) + " |", end='')
+		flag = 0
+		print("\n")
+				
+def afficheEPI():
+	try:
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From EPI')
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
+		
 #afficher la liste de matériel d'un type donné
 
-def AfficheType(Type):
-    try :
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From EPI Where TypeEPI = Type')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
-    
+def afficheType(typeEPI):
+	typeEPI = typeEPI.lower()
+	try :
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From EPI Where TypeEPI = ? OR TypeEPI = ?',(typeEPI,typeEPI.capitalize()))
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
+	
 #afficher la liste de matériel emprunté
 
-def AfficheEmprunt():
-    try : 
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From EPI Where StatutLocation = 1')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
-        
+def afficheEmprunt():
+	try : 
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From EPI WHERE StatutLocation = 1')
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
+		
 #afficher la liste de matériel en maintenance 
 
-def AfficheMaintenance():
-    try : 
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From Maintenance')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
-    
+def afficheMaintenance():
+	try : 
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From Maintenance')
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
+	
 #afficher la liste de matériel en rebut
-def AfficheRebut():
-    try : 
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From EPI Where MiseEnRebut = 1')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
+def afficheRebut():
+	try : 
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From EPI Where MiseEnRebut = 1')
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
 
 #afficher la liste de matériel en retrait = matériel ayant besoin d'un contrôle complémentaire
-def AfficheRetrait():
-    try :
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From EPI Where RetraitEPI = 1')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
+def afficheRetrait():
+	try :
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From EPI Where RetraitEPI = 1')
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
 
 #afficher les informations d’un matériel précis
-def AfficheInfo(IdEpi):
-    try :
-        connection = sqlite3.connect('/Users/eva/Documents/Centrale/COURS/EI2/INFO/PAPPL/base_EPI.db')
-        curseur = connection.cursor()
-        curseur.execute('SELECT * From EPI Where IdEPI = IdEpi')
-        rows = curseur.fetchall()
-        for row in rows :
-            print (row)
-    except Exception as e:
-        print("Exception levée : ")
-        print(e)
-    finally :
-        #on ferme la connection avec la base de donnée
-        curseur.commit()
-        curseur.close()
-    return()
-    
+def afficheInfo(IdEpi):
+	try :
+		connection = sqlite3.connect('base_EPI.db')
+		curseur = connection.cursor()
+		curseur.execute('SELECT * From EPI Where Id_epi = ? ',(IdEpi,))
+		rows = curseur.fetchall()
+		_affichage(rows,curseur)
+	except Exception as e:
+		print("Exception levée : ")
+		print(e)
+	finally :
+		#on ferme la connection avec la base de donnée
+		connection.commit()
+		connection.close()
+	return()
+	
 
  
