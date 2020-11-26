@@ -52,7 +52,10 @@ def main():
 			choixGestion = input("Vore choix : ")
 
 			if choixGestion == 1:
-				changementAttribut()
+				idEPI = input("Id de l'attribut à modifier")
+				attribut = input("attribut à modifier :")
+				valeur = input("Valeur de cette attriut ")
+				changementAttribut(idEPI, valeur = attribut)
 			elif choixGestion == 2:
 				typeEPI = input("Quel est le type que vous souhaitez ajouter : ")
 				ajoutTypeEPI(typeEPI)
@@ -101,11 +104,25 @@ def main():
 				else:
 					print("Erreur de valeur")			
 			elif choixGestion == 12:
-				ajoutReservation()
+				dateloc = input("Date de debut de location (YYYY-MM-DD) : ")
+				dateRet = input("Date de retour de reservation : ")
+				prenom = input("Prenom de l'emprunteur : ")
+				nom = input("Nom de l'emprunteur : ")
+				idEPI = input("Id de l'EPI à emprunter : ")
+				remarque = input("Remarque eventuelles : ")
+				ajoutReservation(dateloc,dateRet,prenom,nom,idEPI,remarque)
 			elif choixGestion == 13:
-				supprimerReservation()
+				idcont = input("Id du contrat à supprimer")
+				supprimerReservation(idcont)
 			elif choixGestion == 14:
-				effectuerControle()
+				idEPI = input("Id de l'EPI sur laquel on effectue le controle : ")
+				nom = input("Nom du controleur : ")
+				prenom = input("Prenom du controleur : ")
+				typeControle = input("Type du controle : ")
+				date = input("Date du controle : ")
+				analyse = input("analyse : ")
+				remarque = input("Remarque eventuelles : ")
+				effectuerControle(idEPI,nom,prenom,typeControle,date,analyse,remarque)
 			else:
 				print("valeur incorect \n")
 
