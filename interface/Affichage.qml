@@ -5,6 +5,7 @@ Page {
     title: qsTr("Affichage")
 
 	 header: ToolBar {
+	 	id: tbh
         ToolButton {
             id: toolButton
             text: "\u03A7"
@@ -182,29 +183,102 @@ Page {
     	id:ttaffiche
     	anchors.left: menu.right 
 	    width: window.width - menu.width 
-    	height: window.height*0.8
+    	height: window.height - tbh.height - toolB.height
+
     	color:"white"
     	visible:true
+    	clip: true
 
     	SwipeView {
         	id: swipeView
         	anchors.fill: parent
 
 	        Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
 
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage de tout les EPIs")
+			    }
 	        }
 	        Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
+
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage des Epi d'un type")
+			    }
 	        
 	        }Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
 
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage des EPIs empruntés")
+			    }
 	        }Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
 
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage des EPIs en maintenance")
+			    }
 	        }Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
 
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage des EPIs en rebut")
+			    }
 	        }Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
 
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage des d'une EPI")
+			    }
 	        }Item{
+	        	Rectangle{
+	        		height: ttaffiche.height*0.94
+	        		width: ttaffiche.width*0.94
+	        		anchors.centerIn: parent
+	        		color: "gainsboro"
+	        	}
 
+	        	Label {
+			        anchors.centerIn: parent
+			        text: qsTr("Affichage des EPIs en retrait")
+			    }
 	        }
 		}
     	PageIndicator {

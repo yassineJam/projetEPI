@@ -82,7 +82,7 @@ ApplicationWindow {
                 text: qsTr("Exporter la BDD")
                 width: parent.width
                 onClicked: {
-                    stackView.push("export.qml")
+                    stackView.push("Export.qml")
                     drawer.close()
                 }
             }
