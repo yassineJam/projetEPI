@@ -3,6 +3,8 @@ import sqlite3
 import datetime
 from fonctionAffichageEva import _affichage
 
+import pandas as pd
+
 
 # List EPI types
 def listeTypesEPI():
@@ -47,8 +49,15 @@ def getRowCurs(IdEpi):
 # A small adapter class
 class EPI_adapter :
     
+    
+    @staticmethod
+    def getAttributes():
+        return ['Id_epi', 'TypeEpi', 'NumSerie', 'DateDeFabrication', 'DateAchat', 'DatePremiereUtilisation',\
+                'DateMiseAuRebut', 'Modele', 'DureeDeVie', 'DureeUtilisation', 'Marque','Couleur',\
+                'NombreDansLeLot', 'StatutLocation', 'MisEnService', 'RetraitEPI', 'MiseEnRebut']
+    
     def __init__(self, rowCurs = None):
-
+        
         if not rowCurs:
             self.Id_epi = None #int
             self.TypeEpi = None #text
@@ -111,6 +120,27 @@ class EPI_adapter :
         print(self.__str__())
         print('------------------------------------------------------------')
 
+    
+    
+    def asList(self):
+        return [self.Id_epi,
+        self.TypeEpi,
+        self.NumSerie,
+        self.DateDeFabrication,
+        self.DateAchat,
+        self.DatePremiereUtilisation,
+        self.DateMiseAuRebut,
+        self.Modele,
+        self.DureeDeVie,
+        self.DureeUtilisation,
+        self.Marque,
+        self.Couleur,
+        self.NombreDansLeLot,
+        self.StatutLocation,
+        self.MisEnService,
+        self.RetraitEPI,
+        self.MiseEnRebut]
+
 
 
 
@@ -118,7 +148,7 @@ class EPI_adapter :
 def extractionRegistre(filename):
     try :
         types = listeTypesEPI()
-        print(types)
+        # print(types)
 
         connection = sqlite3.connect('base_EPI.db')
         curseur = connection.cursor()
@@ -139,6 +169,69 @@ def extractionRegistre(filename):
                 epi = EPI_adapter((row, curseur))
                 f.write(str(epi)+'\n')
             
+            f.write('\n\n')
+
+
+        f.close()
+
+    except Exception as e:
+        print("Exception levée : ")
+        print(e)
+    finally :
+        print('done')
+    return()
+
+
+
+
+
+def prettyExtractionRegistre(filename):
+    try :
+        types = listeTypesEPI()
+        # print(types)
+
+        connection = sqlite3.connect('base_EPI.db')
+        curseur = connection.cursor()
+        
+        # ---------------------------------
+        # Fill the whole panda dataframe
+        # ---------------------------------
+        
+        # Create a pandas dataframe
+        df_register = pd.DataFrame(columns=EPI_adapter.getAttributes())
+        
+        # Query database
+        curseur.execute('SELECT * From EPI')
+        rows = curseur.fetchall()
+        
+        # Fill the dataframe row by row (efficiency ?)
+        for irow, row in enumerate(rows):
+            epi = EPI_adapter((row, curseur))
+            df_register.loc[irow] = epi.asList()
+            
+        # print(df_register)
+        
+        # return df_register
+        
+
+        f = open(filename, 'w')
+        f.write('# Registre EPI COC Escalade ' + str(datetime.date.today()) + '\n')
+
+        for type in types:
+            
+            # Filter dataframe (set everything to lower in the test)
+            msk = df_register['TypeEpi'].str.lower() == type.lower()
+            # print(df_register[msk])
+            # print(type)
+            
+            # Markdown section
+            f.write('## '+type+ ' (' + str(msk.sum()) +')\n')
+            
+            if msk.sum():
+                # Export table (ATTENTION: python.tabulate is needed for the export)
+                f.write(df_register[msk].to_markdown(index=False))
+            
+                        
             f.write('\n\n')
 
 

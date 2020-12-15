@@ -1,4 +1,4 @@
-from additionalFunctions import getRowCurs, extractionRegistre, EPI_adapter
+from additionalFunctions import getRowCurs, EPI_adapter, extractionRegistre, prettyExtractionRegistre
 
 # ------------------------------------
 # Test getRowCurs
@@ -26,3 +26,4 @@ epi.print()
 # Test register extraction
 # ------------------------------------
 extractionRegistre('testExportRegister.md')
+prettyExtractionRegistre('testExportRegister_pretty.md')
