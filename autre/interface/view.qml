@@ -50,7 +50,6 @@ ApplicationWindow {
                 text: qsTr("")
                 width: parent.width
                 onClicked: {
-                    stackView.push("Home.qml")
                     drawer.close()
                 }
             }
@@ -96,6 +95,8 @@ ApplicationWindow {
         anchors.fill: parent
         initialItem: Home {}
     }
+
+    
 }
 
 
