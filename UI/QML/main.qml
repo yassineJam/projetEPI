@@ -10,6 +10,7 @@ ApplicationWindow {
     width: 1600
     height: 900
 	FontLoader { id: robotoR; source: "../ressources/font//Roboto-Regular.ttf" }
+    FontLoader { id: robotoL; source: "../ressources/font//Roboto-Thin.ttf" }
 
     menuBar: ToolBar {
     	id: tb

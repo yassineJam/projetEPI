@@ -1,6 +1,6 @@
 import sys
 import sqlite3
-import bddAccess as api
+import apiXmlQmlLink as axql
 from PySide2.QtGui import QGuiApplication
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtCore import QUrl
@@ -9,8 +9,7 @@ if __name__ == '__main__':
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
 
-    access = api.Api()
-    access.getAll()
+    access = axql.Link()
 
     engine.rootContext().setContextProperty("api", access)
     
